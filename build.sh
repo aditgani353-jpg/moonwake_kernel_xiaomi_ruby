@@ -3,6 +3,8 @@
 # Compile script for kernel
 #
 
+WORK_DIR=$(pwd)
+CLANG_DIR="$WORK_DIR/myclang"
 SECONDS=0 # builtin bash timer
 DEVICE="ruby"
 ZIPNAME="MoonWake-Private-$(date '+%Y%m%d-%H%M').zip"
@@ -10,7 +12,7 @@ ZIPNAME="MoonWake-Private-$(date '+%Y%m%d-%H%M').zip"
 export ARCH=arm64
 export KBUILD_BUILD_USER=rainyxeon
 export KBUILD_BUILD_HOST=private.deepinrain.com
-export PATH="/root/clang-r530567/bin/:$PATH"
+export PATH="$CLANG_DIR/bin/:$PATH"
 
 if [[ $1 = "-c" || $1 = "--clean" ]]; then
 	rm -rf out
