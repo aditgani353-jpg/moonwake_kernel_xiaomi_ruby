@@ -43,4 +43,6 @@ function moonwake_defconfig(){
     echo -e "${green}Defconfig setup complete.${white}"
     echo -e "\n"
     echo -e "${yellow}You can now proceed to build the kernel using ./build.sh.${white}"
-} 
+}
+
+moonwake_defconfig
